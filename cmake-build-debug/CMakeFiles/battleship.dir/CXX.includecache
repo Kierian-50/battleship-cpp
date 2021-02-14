@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kierian/CLionProjects/battleship/src/BiblioStd.h
+iostream
+-
+sstream
+-
+string
+-
+fstream
+-
+cstdlib
+-
+
+/home/kierian/CLionProjects/battleship/src/CBateau.h
+BiblioStd.h
+/home/kierian/CLionProjects/battleship/src/BiblioStd.h
+
+/home/kierian/CLionProjects/battleship/src/testCBateau.cpp
+CBateau.h
+/home/kierian/CLionProjects/battleship/src/CBateau.h
+
