@@ -9,6 +9,7 @@ void testConstructeurNormal();
 void testConstructeurErreur();
 void testTirAdverse();
 void testEstCoule();
+void testCopyConstructeur();
 
 int main() {
     testConstructeurVide();
@@ -16,6 +17,7 @@ int main() {
     testConstructeurErreur();
     testTirAdverse();
     testEstCoule();
+    testCopyConstructeur();
     cout << "[I] Fin !" << endl;
     return 0;
 }
@@ -153,5 +155,24 @@ void testEstCoule(){
     }else{
         cout << "[*] ERREUR estCoule : " << endl;
         cout << bateau;
+    }
+}
+
+/**
+ * This method allows to test the copy constructor from CBateau
+ * Cette méthode permet de tester le copie constructeur de CBateau
+ */
+void testCopyConstructeur(){
+    pair<int, int> pos;
+    pos.first = 5;
+    pos.second = 5;
+    CBateau oldBateau("Le Vigilant", pos, 3);
+    CBateau newBateau = oldBateau;
+
+    if(newBateau.getNom() == "Le Vigilant"){
+        cout << "[I] Copy constructor : OK" << endl;
+    }else{
+        cout << "[*] Copy constructor : " << endl;
+        cout << newBateau;
     }
 }

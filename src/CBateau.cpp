@@ -151,7 +151,13 @@ ostream &operator<<(ostream &os, CBateau &theB) {
     os << "[I] Nom / Name : " << theB.getNom() << endl;
     os << "[I] Taille / Size : " << theB.getTaille() << endl;
     os << "[I] Position : ( " << theB.getPositions().first << " ; " << theB.getPositions().second << " ) "<< endl;
-    os << "[I] Coulé / isSunk : " << theB.estCoule() << endl;
+    os << "[I] Coulé / isSunk : " ;
+    if(theB.estCoule()){
+        os << "True" << endl;
+
+    }else{
+        os << "False" << endl;
+    }
     os << "[I] Dégats / Damages : [";
     for (int i = theB.m_taille - 1; i >= 0; i--){
         if(theB.getDegats(i)){

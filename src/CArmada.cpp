@@ -2,6 +2,7 @@
 // Created by kierian on 17/02/2021.
 //
 
+#include <iterator>
 #include "CArmada.h"
 
 /**
@@ -30,7 +31,7 @@ CBateau *CArmada::getBateau(int i) {
  * @return The total number of boats of the armada / Le nombre total de bateaux de l'armada
  */
 int CArmada::getEffectifTotal() {
-    return this->m_listeBateaux.size();
+    return (int)this->m_listeBateaux.size();
 }
 
 /**
@@ -40,7 +41,7 @@ int CArmada::getEffectifTotal() {
  */
 int CArmada::getNbreTotCases() {
     int res = 0;
-    for(int i = 0; i <= this->m_listeBateaux.size(); i++){
+    for(int i = 0; i <= (int)this->m_listeBateaux.size(); i++){
         res += this->getBateau(i)->getTaille();
     }
     return res;
@@ -53,7 +54,7 @@ int CArmada::getNbreTotCases() {
  */
 int CArmada::getEffectif() {
     int res = 0;
-    for(int i = 0; i <= this->m_listeBateaux.size(); i++){
+    for(int i = 0; i <= (int)this->m_listeBateaux.size(); i++){
         if(!this->getBateau(i)->estCoule()){
             res++;
         }
@@ -78,15 +79,20 @@ void CArmada::getArmadaFromFile() {
         getline ( input, maCh, '\n' );
         cout << "[I] " << maCh << endl;
         if(maCh.at(0) != '#'){
-            string nom = maCh.substr(0, maCh.find(' '));
-            string nbBateau = maCh.substr(1, maCh.find(' '));
-            string taille = maCh.substr(2, maCh.find(' '));
+            // Split function
+            istringstream buf(maCh);
+            istream_iterator<std::string> beg(buf), end;
+            std::vector<std::string> tokens(beg, end);
+
+            string nom = tokens[0];
+            string nbBateau = tokens[1];
+            string taille = tokens[2];
 
             int nbBateauInt = stoi(nbBateau);
             int tailleInt = stoi(taille);
 
             if(nbBateauInt >= 1){
-                for(int i = 0; i<= nbBateauInt; i++){
+                for(int i = 0; i<= nbBateauInt-1; i++){
                     pair<int, int> pos;
                     pos.first = 0;
                     pos.second = 0;
@@ -108,10 +114,17 @@ void CArmada::getArmadaFromFile() {
  */
 bool CArmada::placerAleatoirement() {
     int borneSup = 10;
+
+    // If the number of boxes are inferior of the required number for every boats.
+    // Si le nombre de cases est inférieur au nombre requis pour tous les bateaux.
     if(this->getNbreTotCases() > borneSup*borneSup){
         return false;
     }
 
+    for(int i = 0; i <= (int) this->m_listeBateaux.size(); i++){
+        int k = rand()%(borneSup + 1);
+        cout << "k = " << k;
+    }
 
     return false;
 }
