@@ -12,5 +12,7 @@ using namespace std;
 #include <string>
 #include <fstream>
 #include <cstdlib>
+#include <vector>
+#include <cstdlib> /* atoi */
 
 #endif //BATTLESHIP_BIBLIOSTD_H

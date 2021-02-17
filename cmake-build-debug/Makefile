@@ -170,6 +170,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/CArmada.o: src/CArmada.cpp.o
+
+.PHONY : src/CArmada.o
+
+# target to build an object file
+src/CArmada.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/src/CArmada.cpp.o
+.PHONY : src/CArmada.cpp.o
+
+src/CArmada.i: src/CArmada.cpp.i
+
+.PHONY : src/CArmada.i
+
+# target to preprocess a source file
+src/CArmada.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/src/CArmada.cpp.i
+.PHONY : src/CArmada.cpp.i
+
+src/CArmada.s: src/CArmada.cpp.s
+
+.PHONY : src/CArmada.s
+
+# target to generate assembly for a file
+src/CArmada.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/src/CArmada.cpp.s
+.PHONY : src/CArmada.cpp.s
+
 src/CBateau.o: src/CBateau.cpp.o
 
 .PHONY : src/CBateau.o
@@ -196,6 +223,33 @@ src/CBateau.s: src/CBateau.cpp.s
 src/CBateau.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/src/CBateau.cpp.s
 .PHONY : src/CBateau.cpp.s
+
+src/testCArmada.o: src/testCArmada.cpp.o
+
+.PHONY : src/testCArmada.o
+
+# target to build an object file
+src/testCArmada.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/src/testCArmada.cpp.o
+.PHONY : src/testCArmada.cpp.o
+
+src/testCArmada.i: src/testCArmada.cpp.i
+
+.PHONY : src/testCArmada.i
+
+# target to preprocess a source file
+src/testCArmada.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/src/testCArmada.cpp.i
+.PHONY : src/testCArmada.cpp.i
+
+src/testCArmada.s: src/testCArmada.cpp.s
+
+.PHONY : src/testCArmada.s
+
+# target to generate assembly for a file
+src/testCArmada.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/src/testCArmada.cpp.s
+.PHONY : src/testCArmada.cpp.s
 
 src/testCBateau.o: src/testCBateau.cpp.o
 
@@ -236,9 +290,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/CArmada.o"
+	@echo "... src/CArmada.i"
+	@echo "... src/CArmada.s"
 	@echo "... src/CBateau.o"
 	@echo "... src/CBateau.i"
 	@echo "... src/CBateau.s"
+	@echo "... src/testCArmada.o"
+	@echo "... src/testCArmada.i"
+	@echo "... src/testCArmada.s"
 	@echo "... src/testCBateau.o"
 	@echo "... src/testCBateau.i"
 	@echo "... src/testCBateau.s"
