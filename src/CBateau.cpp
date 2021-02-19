@@ -193,7 +193,7 @@ CBateau::CBateau(const CBateau &toCopy) {
  */
 CBateau::~CBateau() {
     if ( this->m_pDegats != NULL ) {
-        cout << "[I] Destruction de CBateau" << endl;
+        //cout << "[I] Destruction de CBateau" << endl;
         delete[] this->m_pDegats;
     }
 }

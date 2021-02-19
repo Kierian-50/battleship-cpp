@@ -15,12 +15,36 @@ string
 -
 fstream
 -
+vector
+-
 cstdlib
 -
+
+/home/kierian/CLionProjects/battleship/src/CArmada.cpp
+iterator
+-
+CArmada.h
+/home/kierian/CLionProjects/battleship/src/CArmada.h
+
+/home/kierian/CLionProjects/battleship/src/CArmada.h
+BiblioStd.h
+/home/kierian/CLionProjects/battleship/src/BiblioStd.h
+CBateau.h
+/home/kierian/CLionProjects/battleship/src/CBateau.h
+
+/home/kierian/CLionProjects/battleship/src/CBateau.cpp
+CBateau.h
+/home/kierian/CLionProjects/battleship/src/CBateau.h
 
 /home/kierian/CLionProjects/battleship/src/CBateau.h
 BiblioStd.h
 /home/kierian/CLionProjects/battleship/src/BiblioStd.h
+
+/home/kierian/CLionProjects/battleship/src/testCArmada.cpp
+CArmada.h
+/home/kierian/CLionProjects/battleship/src/CArmada.h
+CBateau.h
+/home/kierian/CLionProjects/battleship/src/CBateau.h
 
 /home/kierian/CLionProjects/battleship/src/testCBateau.cpp
 CBateau.h

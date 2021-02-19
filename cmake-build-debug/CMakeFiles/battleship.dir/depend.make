@@ -3,9 +3,19 @@
 
 CMakeFiles/battleship.dir/main.cpp.o: ../main.cpp
 
+CMakeFiles/battleship.dir/src/CArmada.cpp.o: ../src/BiblioStd.h
+CMakeFiles/battleship.dir/src/CArmada.cpp.o: ../src/CArmada.cpp
+CMakeFiles/battleship.dir/src/CArmada.cpp.o: ../src/CArmada.h
+CMakeFiles/battleship.dir/src/CArmada.cpp.o: ../src/CBateau.h
+
 CMakeFiles/battleship.dir/src/CBateau.cpp.o: ../src/BiblioStd.h
 CMakeFiles/battleship.dir/src/CBateau.cpp.o: ../src/CBateau.cpp
 CMakeFiles/battleship.dir/src/CBateau.cpp.o: ../src/CBateau.h
+
+CMakeFiles/battleship.dir/src/testCArmada.cpp.o: ../src/BiblioStd.h
+CMakeFiles/battleship.dir/src/testCArmada.cpp.o: ../src/CArmada.h
+CMakeFiles/battleship.dir/src/testCArmada.cpp.o: ../src/CBateau.h
+CMakeFiles/battleship.dir/src/testCArmada.cpp.o: ../src/testCArmada.cpp
 
 CMakeFiles/battleship.dir/src/testCBateau.cpp.o: ../src/BiblioStd.h
 CMakeFiles/battleship.dir/src/testCBateau.cpp.o: ../src/CBateau.h

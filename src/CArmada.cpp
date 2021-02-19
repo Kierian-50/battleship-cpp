@@ -113,7 +113,10 @@ void CArmada::getArmadaFromFile() {
  * @return False if the automatically positioning failed / Faux si le positionnement automatique a échoué.
  */
 bool CArmada::placerAleatoirement() {
-    int borneSup = 10;
+    srand( (unsigned)time(NULL) );
+    // The size of the grid is between 0 and 9
+    // La taille de la grille est entre 0 et 9
+    int borneSup = 9;
 
     // If the number of boxes are inferior of the required number for every boats.
     // Si le nombre de cases est inférieur au nombre requis pour tous les bateaux.
@@ -121,11 +124,72 @@ bool CArmada::placerAleatoirement() {
         return false;
     }
 
-    for(int i = 0; i <= (int) this->m_listeBateaux.size(); i++){
-        int k = rand()%(borneSup + 1);
-        cout << "k = " << k;
+    // create a vector of occupied boxes
+    // crée un vecteur de cases occupées
+    vector<pair<int, int>> occupied_boxes;
+    // Count the number of placement error
+    // Compte le nombre d'erreur de placement
+    int error = 0;
+
+    // For each boat
+    // Pour chaque bateau
+    for(int i = 0; i < (int) this->m_listeBateaux.size();){
+        // Find the position randomly
+        // Trouve la position au hasard
+        int x = rand()%(borneSup + 1);
+        int y = rand()%(borneSup + 1);
+
+        // init var
+        int ii = 0;
+        bool found = true;
+
+        // Check that the boat can enter
+        // Vérifie que le bateau peut rentrer
+        if(x+this->m_listeBateaux[i].getTaille() > borneSup){
+            found = false;
+        }else if(i>0){
+            // Check that it's not the first turn of the loop
+            // Vérifie que ce n'est pas le premier tour de boucle
+
+            // For each occupied boxes and while the position seems correct
+            // Pour chaque case occupée et tant que la position est correct pour l'instant
+            while(found and ii <= (int) occupied_boxes.size()){
+                // For each future position of the boat
+                // Pour chaque futur position du bateau
+                for(int iii = 0; iii < this->m_listeBateaux[i].getTaille(); iii++){
+                    // If the current position is already occupied, found become false
+                    // Si la position courante est déjà occupé, found devient faux
+                    if(occupied_boxes[ii].first == x+iii and occupied_boxes[ii].second == y){
+                        found = false;
+                    }
+                }
+                ii++;
+            }
+        }
+
+        // If the position is correct set the variable
+        // Si la position est correct, alors défini les variables
+        if(found){
+            // Add each the position of the boat in a vector
+            // Ajoute chaque position du bateau dans un vecteur
+            for(int j = 0; j < this->m_listeBateaux[i].getTaille(); j++){
+                occupied_boxes.push_back(make_pair(x+j,y));
+            }
+            // Set the position of the boat
+            // Défini la position du bateau
+            this->m_listeBateaux[i].setPosition(x,y);
+            i++;
+        }else{
+            // In case of error, increment the variable error. If it's superior of 1000 return false
+            // En cas d'erreur, incremente la variable error. si elle est supérieur à 1000 retourne faux
+            error++;
+            if(error >= 1000){
+                return false;
+            }
+        }
+
     }
 
-    return false;
+    return true;
 }
 

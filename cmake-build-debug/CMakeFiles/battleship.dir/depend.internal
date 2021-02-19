@@ -3,10 +3,20 @@
 
 CMakeFiles/battleship.dir/main.cpp.o
  /home/kierian/CLionProjects/battleship/main.cpp
+CMakeFiles/battleship.dir/src/CArmada.cpp.o
+ /home/kierian/CLionProjects/battleship/src/BiblioStd.h
+ /home/kierian/CLionProjects/battleship/src/CArmada.cpp
+ /home/kierian/CLionProjects/battleship/src/CArmada.h
+ /home/kierian/CLionProjects/battleship/src/CBateau.h
 CMakeFiles/battleship.dir/src/CBateau.cpp.o
  /home/kierian/CLionProjects/battleship/src/BiblioStd.h
  /home/kierian/CLionProjects/battleship/src/CBateau.cpp
  /home/kierian/CLionProjects/battleship/src/CBateau.h
+CMakeFiles/battleship.dir/src/testCArmada.cpp.o
+ /home/kierian/CLionProjects/battleship/src/BiblioStd.h
+ /home/kierian/CLionProjects/battleship/src/CArmada.h
+ /home/kierian/CLionProjects/battleship/src/CBateau.h
+ /home/kierian/CLionProjects/battleship/src/testCArmada.cpp
 CMakeFiles/battleship.dir/src/testCBateau.cpp.o
  /home/kierian/CLionProjects/battleship/src/BiblioStd.h
  /home/kierian/CLionProjects/battleship/src/CBateau.h

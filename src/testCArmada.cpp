@@ -10,13 +10,15 @@ void testGetEffectifTotal();
 void testGetNbreTotCases();
 void testGetEffectif();
 void testGetArmadaFromFile();
+void testPlacerAleatoirement();
 
 int main() {
-    testAjouterBateau();
-    testGetEffectifTotal();
-    testGetNbreTotCases();
-    testGetEffectif();
-    testGetArmadaFromFile();
+    //testAjouterBateau();
+    //testGetEffectifTotal();
+    //testGetNbreTotCases();
+    //testGetEffectif();
+    //testGetArmadaFromFile();
+    testPlacerAleatoirement();
     cout << "[I] Fin !" << endl;
     return 0;
 }
@@ -160,4 +162,23 @@ void testGetArmadaFromFile(){
         cout << "[*] Test de getArmadaFromFile : ERREUR ; Nombre de bateau : " << armada.getEffectifTotal() << ", Attendu : 4"
              << endl;
     }
+}
+
+/**
+ * This method allows to test the method placeAleatoirement from CArmada in a normal case.
+ * Cette méthode permet de tester placeAleatoirement de CArmada dans un cas normal.
+ */
+void testPlacerAleatoirement(){
+    CArmada armada;
+    CBateau bateau1("bateau1", make_pair(1,1), 3);
+    CBateau bateau2("bateau2", make_pair(1,1), 3);
+    CBateau bateau3("bateau3", make_pair(1,1), 3);
+    CBateau bateau4("bateau4", make_pair(1,1), 3);
+
+    armada.ajouterBateau(bateau1);
+    armada.ajouterBateau(bateau2);
+    armada.ajouterBateau(bateau3);
+    armada.ajouterBateau(bateau4);
+
+    armada.placerAleatoirement();
 }
