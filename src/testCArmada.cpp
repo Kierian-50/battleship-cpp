@@ -13,11 +13,11 @@ void testGetArmadaFromFile();
 void testPlacerAleatoirement();
 
 int main() {
-    //testAjouterBateau();
-    //testGetEffectifTotal();
-    //testGetNbreTotCases();
-    //testGetEffectif();
-    //testGetArmadaFromFile();
+    testAjouterBateau();
+    testGetEffectifTotal();
+    testGetNbreTotCases();
+    testGetEffectif();
+    testGetArmadaFromFile();
     testPlacerAleatoirement();
     cout << "[I] Fin !" << endl;
     return 0;

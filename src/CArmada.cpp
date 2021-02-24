@@ -92,7 +92,7 @@ void CArmada::getArmadaFromFile() {
             int tailleInt = stoi(taille);
 
             if(nbBateauInt >= 1){
-                for(int i = 0; i<= nbBateauInt-1; i++){
+                for(int i = 0; i <= nbBateauInt-1; i++){
                     pair<int, int> pos;
                     pos.first = 0;
                     pos.second = 0;
@@ -159,7 +159,7 @@ bool CArmada::placerAleatoirement() {
                 for(int iii = 0; iii < this->m_listeBateaux[i].getTaille(); iii++){
                     // If the current position is already occupied, found become false
                     // Si la position courante est déjà occupé, found devient faux
-                    if(occupied_boxes[ii].first == x+iii and occupied_boxes[ii].second == y){
+                    if(&occupied_boxes[ii] != NULL and occupied_boxes[ii].first == x+iii and occupied_boxes[ii].second == y){
                         found = false;
                     }
                 }
