@@ -82,9 +82,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/kierian/CLionProjects/battleship/main.cpp">
-			<Option target="battleship"/>
-		</Unit>
 		<Unit filename="/home/kierian/CLionProjects/battleship/src/BiblioStd.h">
 			<Option target="battleship"/>
 		</Unit>
@@ -100,10 +97,19 @@
 		<Unit filename="/home/kierian/CLionProjects/battleship/src/CBateau.h">
 			<Option target="battleship"/>
 		</Unit>
+		<Unit filename="/home/kierian/CLionProjects/battleship/src/CGui.cpp">
+			<Option target="battleship"/>
+		</Unit>
+		<Unit filename="/home/kierian/CLionProjects/battleship/src/CGui.h">
+			<Option target="battleship"/>
+		</Unit>
 		<Unit filename="/home/kierian/CLionProjects/battleship/src/testCArmada.cpp">
 			<Option target="battleship"/>
 		</Unit>
 		<Unit filename="/home/kierian/CLionProjects/battleship/src/testCBateau.cpp">
+			<Option target="battleship"/>
+		</Unit>
+		<Unit filename="/home/kierian/CLionProjects/battleship/src/testCGui.cpp">
 			<Option target="battleship"/>
 		</Unit>
 		<Unit filename="/home/kierian/CLionProjects/battleship/CMakeLists.txt">

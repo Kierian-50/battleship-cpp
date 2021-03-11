@@ -185,7 +185,6 @@ CBateau::CBateau(const CBateau &toCopy) {
         for (int i = toCopy.m_taille - 1; i >= 0; i--)
             this->m_pDegats[i] = toCopy.m_pDegats[i];
     }else this->m_pDegats = NULL;
-
 }
 
 /**

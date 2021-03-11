@@ -3,6 +3,7 @@
 //
 
 #include <iterator>
+#include "BiblioStd.h"
 #include "CArmada.h"
 
 /**
@@ -113,6 +114,7 @@ void CArmada::getArmadaFromFile() {
  * @return False if the automatically positioning failed / Faux si le positionnement automatique a échoué.
  */
 bool CArmada::placerAleatoirement() {
+    // TODO surement à commenter
     srand( (unsigned)time(NULL) );
     // The size of the grid is between 0 and 9
     // La taille de la grille est entre 0 et 9

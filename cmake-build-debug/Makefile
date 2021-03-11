@@ -143,33 +143,6 @@ battleship/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/build
 .PHONY : battleship/fast
 
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 src/CArmada.o: src/CArmada.cpp.o
 
 .PHONY : src/CArmada.o
@@ -223,6 +196,33 @@ src/CBateau.s: src/CBateau.cpp.s
 src/CBateau.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/src/CBateau.cpp.s
 .PHONY : src/CBateau.cpp.s
+
+src/CGui.o: src/CGui.cpp.o
+
+.PHONY : src/CGui.o
+
+# target to build an object file
+src/CGui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/src/CGui.cpp.o
+.PHONY : src/CGui.cpp.o
+
+src/CGui.i: src/CGui.cpp.i
+
+.PHONY : src/CGui.i
+
+# target to preprocess a source file
+src/CGui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/src/CGui.cpp.i
+.PHONY : src/CGui.cpp.i
+
+src/CGui.s: src/CGui.cpp.s
+
+.PHONY : src/CGui.s
+
+# target to generate assembly for a file
+src/CGui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/src/CGui.cpp.s
+.PHONY : src/CGui.cpp.s
 
 src/testCArmada.o: src/testCArmada.cpp.o
 
@@ -278,6 +278,33 @@ src/testCBateau.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/src/testCBateau.cpp.s
 .PHONY : src/testCBateau.cpp.s
 
+src/testCGui.o: src/testCGui.cpp.o
+
+.PHONY : src/testCGui.o
+
+# target to build an object file
+src/testCGui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/src/testCGui.cpp.o
+.PHONY : src/testCGui.cpp.o
+
+src/testCGui.i: src/testCGui.cpp.i
+
+.PHONY : src/testCGui.i
+
+# target to preprocess a source file
+src/testCGui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/src/testCGui.cpp.i
+.PHONY : src/testCGui.cpp.i
+
+src/testCGui.s: src/testCGui.cpp.s
+
+.PHONY : src/testCGui.s
+
+# target to generate assembly for a file
+src/testCGui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/battleship.dir/build.make CMakeFiles/battleship.dir/src/testCGui.cpp.s
+.PHONY : src/testCGui.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -287,21 +314,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... battleship"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... src/CArmada.o"
 	@echo "... src/CArmada.i"
 	@echo "... src/CArmada.s"
 	@echo "... src/CBateau.o"
 	@echo "... src/CBateau.i"
 	@echo "... src/CBateau.s"
+	@echo "... src/CGui.o"
+	@echo "... src/CGui.i"
+	@echo "... src/CGui.s"
 	@echo "... src/testCArmada.o"
 	@echo "... src/testCArmada.i"
 	@echo "... src/testCArmada.s"
 	@echo "... src/testCBateau.o"
 	@echo "... src/testCBateau.i"
 	@echo "... src/testCBateau.s"
+	@echo "... src/testCGui.o"
+	@echo "... src/testCGui.i"
+	@echo "... src/testCGui.s"
 .PHONY : help
 
 

@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/battleship.dir/main.cpp.o CMakeFiles/battleship.dir/src/CBateau.cpp.o CMakeFiles/battleship.dir/src/testCBateau.cpp.o CMakeFiles/battleship.dir/src/CArmada.cpp.o CMakeFiles/battleship.dir/src/testCArmada.cpp.o  -o battleship 
+/usr/bin/c++  -g   CMakeFiles/battleship.dir/src/CBateau.cpp.o CMakeFiles/battleship.dir/src/testCBateau.cpp.o CMakeFiles/battleship.dir/src/CArmada.cpp.o CMakeFiles/battleship.dir/src/testCArmada.cpp.o CMakeFiles/battleship.dir/src/CGui.cpp.o CMakeFiles/battleship.dir/src/testCGui.cpp.o  -o battleship 

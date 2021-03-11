@@ -4,6 +4,7 @@
 
 #include "CArmada.h"
 #include "CBateau.h"
+#include "CGui.h"
 
 void testAjouterBateau();
 void testGetEffectifTotal();
@@ -13,11 +14,11 @@ void testGetArmadaFromFile();
 void testPlacerAleatoirement();
 
 int main() {
-    testAjouterBateau();
-    testGetEffectifTotal();
-    testGetNbreTotCases();
-    testGetEffectif();
-    testGetArmadaFromFile();
+    //testAjouterBateau();
+    //testGetEffectifTotal();
+    //testGetNbreTotCases();
+    //testGetEffectif();
+    //testGetArmadaFromFile();
     testPlacerAleatoirement();
     cout << "[I] Fin !" << endl;
     return 0;
@@ -180,5 +181,12 @@ void testPlacerAleatoirement(){
     armada.ajouterBateau(bateau3);
     armada.ajouterBateau(bateau4);
 
-    armada.placerAleatoirement();
+    CCoups cCoups;
+    try {
+        CGui cGui(&armada, &cCoups);
+        cGui.positionnerBateaux();
+        cout << cGui;
+    } catch (const char* msg) {
+        cerr << msg << endl;
+    }
 }

@@ -4,11 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kierian/CLionProjects/battleship/main.cpp" "/home/kierian/CLionProjects/battleship/cmake-build-debug/CMakeFiles/battleship.dir/main.cpp.o"
   "/home/kierian/CLionProjects/battleship/src/CArmada.cpp" "/home/kierian/CLionProjects/battleship/cmake-build-debug/CMakeFiles/battleship.dir/src/CArmada.cpp.o"
   "/home/kierian/CLionProjects/battleship/src/CBateau.cpp" "/home/kierian/CLionProjects/battleship/cmake-build-debug/CMakeFiles/battleship.dir/src/CBateau.cpp.o"
+  "/home/kierian/CLionProjects/battleship/src/CGui.cpp" "/home/kierian/CLionProjects/battleship/cmake-build-debug/CMakeFiles/battleship.dir/src/CGui.cpp.o"
   "/home/kierian/CLionProjects/battleship/src/testCArmada.cpp" "/home/kierian/CLionProjects/battleship/cmake-build-debug/CMakeFiles/battleship.dir/src/testCArmada.cpp.o"
   "/home/kierian/CLionProjects/battleship/src/testCBateau.cpp" "/home/kierian/CLionProjects/battleship/cmake-build-debug/CMakeFiles/battleship.dir/src/testCBateau.cpp.o"
+  "/home/kierian/CLionProjects/battleship/src/testCGui.cpp" "/home/kierian/CLionProjects/battleship/cmake-build-debug/CMakeFiles/battleship.dir/src/testCGui.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

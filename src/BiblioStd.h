@@ -1,17 +1,36 @@
-//
-// Created by kierian on 10/02/2021.
-//
-
 #ifndef BATTLESHIP_BIBLIOSTD_H
 #define BATTLESHIP_BIBLIOSTD_H
 
-
-using namespace std;
 #include <iostream>
 #include <sstream>
-#include <string>
 #include <fstream>
+#include <string>
 #include <vector>
-#include <cstdlib> /* atoi */
+#include <cstdlib>
+#include <ctime>
+#include <map>
+#include <algorithm>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netdb.h>
+#include <unistd.h>
+#include <cstring>
+#include <arpa/inet.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <stdexcept>
 
-#endif //BATTLESHIP_BIBLIOSTD_H
+/*** CONSTANTES ***/
+// Taille de la grille
+#define TAILLE_GRILLE 11
+// Paramètres réseau
+#define MAXHOSTNAME 200
+#define MAXCONNECTIONS 5
+#define MAXRECV 500
+#define PORTCOM 8000
+#define MAXESSAIS 1000
+
+using namespace std;
+
+#endif
