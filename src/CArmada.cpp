@@ -65,7 +65,7 @@ int CArmada::getEffectif() {
  * Nom / Position en y / Taille
  */
 void CArmada::getArmadaFromFile() {
-    string filename = "../flotille.txt";
+    string filename = "../ws/flotille.txt";
 
     string maCh;
     ifstream input;

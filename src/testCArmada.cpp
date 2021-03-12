@@ -140,7 +140,7 @@ void testGetArmadaFromFile(){
     // Write in the file
     // Ecrit dans le fichier
     ofstream flotille;
-    flotille.open ("/home/kierian/CLionProjects/battleship/flotille.txt");
+    flotille.open ("../ws/flotille.txt");
     flotille << "# Ceci est un commentaire\n";
     flotille << "# This is a comment\n";
     flotille << "sous-marin 2 5\n";
@@ -152,7 +152,7 @@ void testGetArmadaFromFile(){
     cout << "[I] Affiche le contenu du fichier : " << endl;
     CArmada armada;
     armada.getArmadaFromFile();
-    cout << "[I] On remarque qu'il y a des erreurs dans le fichier flotille.txt, c'est pourquoi on observe des "
+    cout << "[I] On remarque qu'il y a des erreurs dans le fichier flotille.txt, c'est pourquoi on observe ces "
             "erreurs." << endl;
     if(armada.getBateau(0)->getNom() == "sous-marin"
         and armada.getBateau(1)->getNom() == "sous-marin"
@@ -165,7 +165,7 @@ void testGetArmadaFromFile(){
     }
 
     // Put back a correct configuration | Remet une bonne configuration
-    flotille.open ("/home/kierian/CLionProjects/battleship/flotille.txt");
+    flotille.open ("../ws/flotille.txt");
     flotille << "# Ceci est un commentaire\n";
     flotille << "# This is a comment\n";
     flotille << "sous-marin 2 5\n";
