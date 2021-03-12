@@ -1,6 +1,0 @@
-cmake_minimum_required(VERSION 3.17)
-project(battleship)
-
-set(CMAKE_CXX_STANDARD 14)
-
-add_executable(battleship src/CBateau.cpp src/CBateau.h src/testCBateau.cpp src/BiblioStd.h src/CArmada.cpp src/CArmada.h src/testCArmada.cpp src/CGui.cpp src/CGui.h src/testCGui.cpp)

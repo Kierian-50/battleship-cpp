@@ -1,7 +1,3 @@
-//
-// Created by kierian on 17/02/2021.
-//
-
 #include "CArmada.h"
 #include "CBateau.h"
 #include "CGui.h"
@@ -14,13 +10,13 @@ void testGetArmadaFromFile();
 void testPlacerAleatoirement();
 
 int main() {
-    //testAjouterBateau();
-    //testGetEffectifTotal();
-    //testGetNbreTotCases();
-    //testGetEffectif();
-    //testGetArmadaFromFile();
+    testAjouterBateau();
+    testGetEffectifTotal();
+    testGetNbreTotCases();
+    testGetEffectif();
+    testGetArmadaFromFile();
     testPlacerAleatoirement();
-    cout << "[I] Fin !" << endl;
+    cout << "[I] Fin test CArmada!" << endl;
     return 0;
 }
 

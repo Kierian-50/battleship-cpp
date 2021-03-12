@@ -1,7 +1,3 @@
-//
-// Created by kierian on 17/02/2021.
-//
-
 #ifndef BATTLESHIP_CARMADA_H
 #define BATTLESHIP_CARMADA_H
 

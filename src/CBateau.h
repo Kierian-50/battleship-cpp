@@ -1,7 +1,3 @@
-//
-// Created by kierian on 10/02/2021.
-//
-
 #ifndef BATTLESHIP_CBATEAU_H
 #define BATTLESHIP_CBATEAU_H
 
@@ -111,21 +107,23 @@ public:
     bool tirAdverse(pair<int, int> p);
 
     /**
-     * Surcharge de l'opérateur << pour afficher à l'écran les caractéristiqes du bateau.
-     * @param os
-     * @param theB
-     * @return
+     * Overload of the << operator to display the characteristics of the boat on the screen
+     * Surcharge de l'opérateur << pour afficher à l'écran les caractéristiqes du bateau
+     * @param os Ostream
+     * @param theB The boat that we want to display the characteristics
+     * @return Ostream
      */
     friend ostream& operator<< (ostream& os, CBateau& theB);
 
     /**
-     * Copy constructor
-     * @param toCopy The object to copy
+     * Copy constructor that allows to copy the content of a CBateau object in another object
+     * Copie constructeur qui permet de copier le contenu d'un objet CBateau dans un autre
+     * @param toCopy The CBateau object to copy | L'objet CBateau a copié
      */
     CBateau(const CBateau& toCopy);
 
     /**
-     * Destructor
+     * Destructor | Destructeur
      */
     ~CBateau();
 };

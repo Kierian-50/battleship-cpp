@@ -1,7 +1,3 @@
-//
-// Created by kierian on 10/03/2021.
-//
-
 #include "CGui.h"
 #include "CArmada.h"
 #include "CCoups.h"
@@ -77,27 +73,27 @@ pair<int, int> CGui::choisirAttaque() {
 
     cout << "Entrez la valeur en x : " << endl;
 
-    // Error Checkin algorithim
+    // Error Checkin algorithm | Algo de vérfification du contenu entrée par l'utilisateur
     while (!(cin >> x) or (x < 0 or x > TAILLE_GRILLE-2))
     {
-        // Explain error
+        // Explain error | Explique l'error
         cout << "ERREUR: Un nombre entre 0 et 9 doit être entré: ";
-        // Clear input stream
+        // Clear input stream | Nettoie l'entrée
         cin.clear();
-        // Discard previous input
+        // Discard previous input | Rejete l'entrée précedente
         cin.ignore(132, '\n');
     }
 
     cout << "Entrez la valeur en y : " << endl;
 
-    // Error Checkin algorithim
+    // Error Checkin algorithm | Algo de vérfification du contenu entrée par l'utilisateur
     while (!(cin >> y) or (y < 0 or y > TAILLE_GRILLE-2))
     {
-        // Explain error
+        // Explain error | Explique l'error
         cout << "ERREUR: Un nombre entre 0 et 9 doit être entré: ";
-        // Clear input stream
+        // Clear input stream | Nettoie l'entrée
         cin.clear();
-        // Discard previous input
+        // Discard previous input | Rejete l'entrée précedente
         cin.ignore(132, '\n');
     }
 
@@ -231,7 +227,7 @@ void CGui::afficherLaGrille(ostream &os, string jouOuAdv) {
         for (int x = 0 ; x < TAILLE_GRILLE-1 ; x++) {
             os << x;
             for (int y = 0 ; y < TAILLE_GRILLE-1 ; y++) {
-                os << " " << this->m_grilleAdv[x][y];
+                os << " " << this->m_grilleAdv[y][x];
             }
             os << endl;
         }

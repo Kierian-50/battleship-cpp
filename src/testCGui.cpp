@@ -1,7 +1,3 @@
-//
-// Created by kierian on 11/03/2021.
-//
-
 #include "BiblioStd.h"
 #include "CGui.h"
 #include "CBateau.h"
@@ -22,7 +18,7 @@ int main() {
     testPositionnerBateau();
     testChoisirAttaque();
     testAffichage();
-    cout << "[I] Fin !" << endl;
+    cout << "[I] Fin test CGui !" << endl;
     return 0;
 }
 
@@ -109,7 +105,7 @@ void testPositionnerBateau(){
 void testChoisirAttaque(){
     CGui cGui;
     pair<int,int> pos = cGui.choisirAttaque();
-    cout << "Entered value : (" << pos.first << ";" << pos.second << ")" << endl;
+    cout << "[I] Entered value : (" << pos.first << ";" << pos.second << ")" << endl;
     cout << "[I] Fin du test de choisirAttaque : OK" << endl;
 }
 

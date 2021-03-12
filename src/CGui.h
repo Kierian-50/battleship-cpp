@@ -1,7 +1,3 @@
-//
-// Created by kierian on 10/03/2021.
-//
-
 #ifndef BATTLESHIP_CGUI_H
 #define BATTLESHIP_CGUI_H
 
@@ -16,13 +12,13 @@ private:
      * Grid of the player
      * Grille du joueur
      */
-    char m_grilleJou[TAILLE_GRILLE-1][TAILLE_GRILLE-1]{};
+    char m_grilleJou[TAILLE_GRILLE-1][TAILLE_GRILLE-1];
 
     /**
      * Grid of the opponent
      * Grille de l'adversaire
      */
-    char m_grilleAdv[TAILLE_GRILLE-1][TAILLE_GRILLE-1]{};
+    char m_grilleAdv[TAILLE_GRILLE-1][TAILLE_GRILLE-1];
 
     /**
      * Pointer on the only armada of the player
@@ -72,7 +68,7 @@ public:
      * de CArmada. Renvoie faux si le positionnement a échoué.
      * @return False if the positioning failed / Faux si le positionnement a échoué.
      */
-    bool positionnerBateaux();
+    bool positionnerBateaux() override;
 
     /**
      * Enter the coordinates (line, column) of the attack (check that the user enter the correct form for
@@ -81,19 +77,19 @@ public:
      * coordonnée par l'utilisateur)
      * @return The coordinates entered by the user / Les coordonnées entrées par l'utilisateur
      */
-    pair<int, int> choisirAttaque();
+    pair<int, int> choisirAttaque() override;
 
     /**
      * Display "Game won" on the screen
      * Affiche "La partie est gagnée" à l'écran
      */
-    void afficheGagne();
+    void afficheGagne() override;
 
     /**
      * Display "Lost Game" on the screen
      * Affiche "La partie est perdue à l'écran
      */
-    void affichePerdu();
+    void affichePerdu() override;
 
     /**
      * Overload of the << operator to display the grids. This function does a simple call to remplirDeuxGrilles of
@@ -111,7 +107,7 @@ public:
      * Remplir la grille du joueur m_grilleJou et la grille de l'adversaire m_grilleAdv
      * @param os Ostream
      */
-    void remplirDeuxGrilles(ostream& os);
+    void remplirDeuxGrilles(ostream& os) override;
 
     /**
      * Display the grid (player and opponent) on the screen, this is to say display the content of m_grilleJou ou
@@ -121,7 +117,7 @@ public:
      * @param os Ostream
      * @param jouOuAdv The name of the player that we'll display / Le nom du joueur dont nous allons afficher la grille
      */
-    void afficherLaGrille(ostream& os, string jouOuAdv);
+    void afficherLaGrille(ostream& os, string jouOuAdv) override;
 };
 
 #endif //BATTLESHIP_CGUI_H

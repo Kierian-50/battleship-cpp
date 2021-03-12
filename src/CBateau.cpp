@@ -1,7 +1,3 @@
-//
-// Created by kierian on 10/02/2021.
-//
-
 #include "CBateau.h"
 
 /**

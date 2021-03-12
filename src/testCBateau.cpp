@@ -1,7 +1,3 @@
-//
-// Created by kierian on 10/02/2021.
-//
-
 #include "CBateau.h"
 
 void testConstructeurVide();
@@ -18,7 +14,7 @@ int main() {
     testTirAdverse();
     testEstCoule();
     testCopyConstructeur();
-    cout << "[I] Fin !" << endl;
+    cout << "[I] Fin test CBateau !" << endl;
     return 0;
 }
 
