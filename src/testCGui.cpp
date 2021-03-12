@@ -12,6 +12,7 @@ void testChoisirAttaque();
 void testAffichage();
 
 int main() {
+    cout << "[I] Début test CGui !" << endl;
     testDefaultConstructor();
     testConstructorParamNormal();
     testConstructorParamError();
@@ -67,7 +68,6 @@ void testConstructorParamError(){
         cout << "[I] Constructeur avec paramètre erreur : ERREUR" << endl;
     } catch (const char* msg) {
         cout << "[I] Constructeur avec paramètre erreur : OK" << endl;
-        cerr << msg << endl;
     }
 }
 

@@ -25,7 +25,7 @@ deleteAll :
 #	- ensuite compiler testCBateau
 
 # La cible "testCBateau" est exécutée en tapant la commande "make testCBateau"
-testCBateau : deleteAll compilCBateau compilTestCBateau
+testCBateau : deleteAll compilCBateau compilTestCBateau lanceurTestCBateau
 
 # La cible "compilCBateau" est exécutée en tapant la commande "make compilCBateau"
 compilCBateau :
@@ -39,7 +39,95 @@ compilTestCBateau :
 	@echo Compilation testCBateau
 	$(GPP) $(SRC)/testCBateau.cpp $(BIN)/CBateau.o -o $(BIN)/testCBateau.bin
 
-# A VOUS D'ECRIRE LA SUITE...
+# La cible "LanceurTestCBateau" est exécutée en tapant la commande make "lanceurTestCBateau"
+lanceurTestCBateau :
+	@# Précéder chaque commande d'une TABULATION
+	@echo Lancement testCBateau
+	$(BIN)/testCBateau.bin
+
+# La cible "testCArmada" est exécutée en tapant la commande "make testCArmada"
+testCArmada : deleteAll compilCArmada  compilCBateau compilCGui compilCCoups compilTestCArmada lanceurTestCArmada
+
+# La cible "compilCArmada" est exécutée en tapant la commande "make compilCArmada"
+compilCArmada :
+	@# Précéder chaque commande d'une TABULATION
+	@echo Compilation CArmada
+	$(GPP) $(SRC)/CArmada.cpp -o $(BIN)/CArmada.o -c
+
+# La cible "compilTestCArmada" est exécutée en tapant la commande "make compilTestCArmada"
+compilTestCArmada :
+	@# Précéder chaque commande d'une TABULATION
+	@echo Compilation testCArmada
+	$(GPP) $(SRC)/testCArmada.cpp $(BIN)/CBateau.o $(BIN)/CArmada.o $(BIN)/CGui.o $(BIN)/CCoups.o -o $(BIN)/testCArmada.bin
+
+# La cible "LanceurTestCArmada" est exécutée en tapant la commande make "lanceurTestCArmada"
+lanceurTestCArmada :
+	@# Précéder chaque commande d'une TABULATION
+	@echo Lancement testCArmada
+	$(BIN)/testCArmada.bin
+
+# La cible "testCGui" est exécutée en tapant la commande "make testCGui"
+testCGui : deleteAll compilCGui compilCArmada compilCBateau compilCCoups compilTestCGui lanceurTestCGui
+
+# La cible "compilCGui" est exécutée en tapant la commande "make compilCGui"
+compilCGui :
+	@# Précéder chaque commande d'une TABULATION
+	@echo Compilation CGui
+	$(GPP) $(SRC)/CGui.cpp -o $(BIN)/CGui.o -c
+
+# La cible "compilTestCGui" est exécutée en tapant la commande "make compilTestCGui"
+compilTestCGui :
+	@# Précéder chaque commande d'une TABULATION
+	@echo Compilation testCGui
+	$(GPP) $(SRC)/testCGui.cpp $(BIN)/CBateau.o $(BIN)/CArmada.o $(BIN)/CCoups.o $(BIN)/CGui.o -o $(BIN)/testCGui.bin
+
+# La cible "LanceurTestCGui" est exécutée en tapant la commande make "lanceurTestCGui"
+lanceurTestCGui :
+	@# Précéder chaque commande d'une TABULATION
+	@echo Lancement testCGui
+	$(BIN)/testCGui.bin
+
+# La cible "compilCCoups" est exécutée en tapant la commande make "compilCCoups"
+compilCCoups :
+	@# Précéder chaque commande d'une TABULATION
+	@echo Compilation CCoups
+	$(GPP) $(SRC)/CCoups.cpp -o $(BIN)/CCoups.o -c
+
+# La cible "compilCSocket" est exécutée en tapant la commande make "compilCSocket"
+compilCSocket :
+	@# Précéder chaque commande d'une TABULATION
+	@echo Compilation CSocket
+	$(GPP) $(SRC)/CSocket.cpp -o $(BIN)/CSocket.o -c
+
+# La cible "compilCClientSocket" est exécutée en tapant la commande make "compilCClientSocket"
+compilCClientSocket :
+	@# Précéder chaque commande d'une TABULATION
+	@echo Compilation CClientSocket
+	$(GPP) $(SRC)/CClientSocket.cpp -o $(BIN)/CClientSocket.o -c
+
+# La cible "compilCServerSocket" est exécutée en tapant la commande make "compilCServerSocket"
+compilCServerSocket :
+	@# Précéder chaque commande d'une TABULATION
+	@echo Compilation CServerSocket
+	$(GPP) $(SRC)/CServerSocket.cpp -o $(BIN)/CServerSocket.o -c
+
+# La cible "compilCJoueur" est exécutée en tapant la commande make "compilCJoueur"
+compilCJoueur :
+	@# Précéder chaque commande d'une TABULATION
+	@echo Compilation CJoueur
+	$(GPP) $(SRC)/CJoueur.cpp -o $(BIN)/CJoueur.o -c
+
+# La cible "compilCJoueurCli" est exécutée en tapant la commande make "compilCJoueurCli"
+compilCJoueurCli :
+	@# Précéder chaque commande d'une TABULATION
+	@echo Compilation CJoueurCli
+	$(GPP) $(SRC)/CJoueurCli.cpp -o $(BIN)/CJoueurCli.o -c
+
+# La cible "compilCJoueurServ" est exécutée en tapant la commande make "compilCJoueurServ"
+compilCJoueurServ :
+	@# Précéder chaque commande d'une TABULATION
+	@echo Compilation CJoueurServ
+	$(GPP) $(SRC)/CJoueurServ.cpp -o $(BIN)/CJoueurServ.o -c
 
 # ICI, la cible de compilation finale pour obtenir main.bin
 # A executer A LA FIN du projet en s'assurant que toutes les classes du projet compilent et s'exécutent sans erreurs !

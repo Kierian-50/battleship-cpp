@@ -20,7 +20,7 @@ CGui::CGui() {
 CGui::CGui(CArmada *pArmada, CCoups *pCoups) {
 
     if(pArmada == NULL or pCoups == NULL){
-        throw "pArmada and pCoups can't be NULL | pArmada and pCoups ne peut être NULL";
+        throw "[*] pArmada and pCoups can't be NULL | pArmada and pCoups ne peut être NULL";
     }
     this->m_pCoups = pCoups;
     this->m_pArmada = pArmada;
@@ -71,26 +71,26 @@ pair<int, int> CGui::choisirAttaque() {
     int x;
     int y;
 
-    cout << "Entrez la valeur en x : " << endl;
+    cout << "[I] Entrez la valeur en x : " << endl;
 
     // Error Checkin algorithm | Algo de vérfification du contenu entrée par l'utilisateur
     while (!(cin >> x) or (x < 0 or x > TAILLE_GRILLE-2))
     {
         // Explain error | Explique l'error
-        cout << "ERREUR: Un nombre entre 0 et 9 doit être entré: ";
+        cout << "[*] ERREUR: Un nombre entre 0 et 9 doit être entré: ";
         // Clear input stream | Nettoie l'entrée
         cin.clear();
         // Discard previous input | Rejete l'entrée précedente
         cin.ignore(132, '\n');
     }
 
-    cout << "Entrez la valeur en y : " << endl;
+    cout << "[I] Entrez la valeur en y : " << endl;
 
     // Error Checkin algorithm | Algo de vérfification du contenu entrée par l'utilisateur
     while (!(cin >> y) or (y < 0 or y > TAILLE_GRILLE-2))
     {
         // Explain error | Explique l'error
-        cout << "ERREUR: Un nombre entre 0 et 9 doit être entré: ";
+        cout << "[*] ERREUR: Un nombre entre 0 et 9 doit être entré: ";
         // Clear input stream | Nettoie l'entrée
         cin.clear();
         // Discard previous input | Rejete l'entrée précedente
@@ -105,7 +105,7 @@ pair<int, int> CGui::choisirAttaque() {
  * Affiche "La partie est gagnée" à l'écran
  */
 void CGui::afficheGagne() {
-    cout << "La partie est gagnée !" << endl;
+    cout << "[I] La partie est gagnée !" << endl;
 }
 
 /**
@@ -113,7 +113,7 @@ void CGui::afficheGagne() {
  * Affiche "La partie est perdue à l'écran
  */
 void CGui::affichePerdu() {
-    cout << "La partie est perdue..." << endl;
+    cout << "[I] La partie est perdue..." << endl;
 }
 
 /**
@@ -194,7 +194,7 @@ void CGui::remplirDeuxGrilles(ostream &os) {
  */
 void CGui::afficherLaGrille(ostream &os, string jouOuAdv) {
     if(jouOuAdv == "joueur"){
-        os << "Affichage de la grille du joueur :" << endl;
+        os << "[I] Affichage de la grille du joueur :" << endl;
 
         // Display the top number | Affiche les nombres en haut
         os << " ";
@@ -214,7 +214,7 @@ void CGui::afficherLaGrille(ostream &os, string jouOuAdv) {
         os << endl;
 
     }else if(jouOuAdv == "adversaire"){
-        os << "Affichage de la grille de l'adversaire :" << endl;
+        os << "[I] Affichage de la grille de l'adversaire :" << endl;
 
         // Display the top number | Affiche les nombres en haut
         os << " ";
@@ -233,6 +233,6 @@ void CGui::afficherLaGrille(ostream &os, string jouOuAdv) {
         }
         os << endl;
     }else{
-        throw "Error with jouOuAdv | Erreur avec jouOuAdv";
+        throw "[*] Error with jouOuAdv | Erreur avec jouOuAdv";
     }
 }

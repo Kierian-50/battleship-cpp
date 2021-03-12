@@ -8,6 +8,7 @@ void testEstCoule();
 void testCopyConstructeur();
 
 int main() {
+    cout << "[I] Début test CBateau !" << endl;
     testConstructeurVide();
     testConstructeurNormal();
     testConstructeurErreur();
@@ -28,7 +29,7 @@ void testConstructeurVide(){
             bateau.getTaille() == 0){
         cout << "[I] Constructeur vide : OK" << endl;
     }else{
-        cout << "[*] ERREUR : constructeur vide " << endl;
+        cout << "[*] [*] Constructeur vide : ERREUR " << endl;
         cout << bateau;
     }
 }
@@ -48,9 +49,9 @@ void testConstructeurNormal(){
         bateau.getTaille() == 2 && !
         bateau.getDegats(0) &&
         !bateau.getDegats(1)){
-        cout << "[I] Constructeur erreur : OK" << endl;
+        cout << "[I] Constructeur normal : OK" << endl;
     }else{
-        cout << "[*] ERREUR constructeur normal : " << endl;
+        cout << "[*] Constructeur normal : ERREUR" << endl;
         cout << bateau;
     }
 }
@@ -69,9 +70,9 @@ void testConstructeurErreur(){
        bateau.getPositions().second == 0 &&
        bateau.getTaille() == 0 && !
                bateau.getDegats(0)){
-        cout << "[I] Constructeur normal : OK" << endl;
+        cout << "[I] Constructeur erreur : OK" << endl;
     }else{
-        cout << "[*] ERREUR Constructeur erreur : " << endl;
+        cout << "[*] Constructeur erreur : ERREUR" << endl;
         cout << bateau;
     }
 }
@@ -97,7 +98,7 @@ void testTirAdverse() {
     if(bateau.getDegats(2)){ // Two because we start at 0 / deux car on commence à 0
         cout << "[I] Tir sur (7;5) : OK" << endl;
     }else{
-        cout << "[*] ERREUR tirAdverse : " << endl;
+        cout << "[*] Tir sur (7;5) : ERREUR" << endl;
         cout << bateau;
     }
 
@@ -110,7 +111,7 @@ void testTirAdverse() {
     if(bateau.getDegats(2) && !bateau.getDegats(1) && !bateau.getDegats(0)){ // Two because we start at 0 / deux car on commence à 0
         cout << "[I] Tir sur (6;6) : OK" << endl;
     }else{
-        cout << "[*] ERREUR tirAdverse: " << endl;
+        cout << "[*] Tir sur (6;6) : ERREUR" << endl;
         cout << bateau;
     }
 }
@@ -137,7 +138,7 @@ void testEstCoule(){
     if(!bateau.estCoule()){
         cout << "[I] Bateau non après coulé : OK" << endl;
     }else{
-        cout << "[*] ERREUR estCoule : " << endl;
+        cout << "[*] estCoule : ERREUR " << endl;
         cout << bateau;
     }
 
@@ -149,7 +150,7 @@ void testEstCoule(){
     if(bateau.estCoule()){
         cout << "[I] Bateau coulé : OK" << endl;
     }else{
-        cout << "[*] ERREUR estCoule : " << endl;
+        cout << "[*] estCoule : ERREUR" << endl;
         cout << bateau;
     }
 }
@@ -168,7 +169,7 @@ void testCopyConstructeur(){
     if(newBateau.getNom() == "Le Vigilant"){
         cout << "[I] Copy constructor : OK" << endl;
     }else{
-        cout << "[*] Copy constructor : " << endl;
+        cout << "[*] Copy constructor : ERREUR" << endl;
         cout << newBateau;
     }
 }

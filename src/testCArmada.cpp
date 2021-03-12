@@ -10,6 +10,7 @@ void testGetArmadaFromFile();
 void testPlacerAleatoirement();
 
 int main() {
+    cout << "[I] Début test CArmada !" << endl;
     testAjouterBateau();
     testGetEffectifTotal();
     testGetNbreTotCases();
@@ -63,9 +64,9 @@ void testGetEffectifTotal(){
     armada.ajouterBateau(bateau4);
 
     if(armada.getEffectifTotal() == 4) {
-        cout << "[I] Test de ajouterBateau : OK" << endl;
+        cout << "[I] Test de getEffectifTotal : OK" << endl;
     }else{
-        cout << "[*] Test de ajouterBateau : ERREUR ; Nombre de bateau : " << armada.getEffectifTotal() << ", Attendu : 4"
+        cout << "[*] Test de getEffectifTotal : ERREUR ; Nombre de bateau : " << armada.getEffectifTotal() << ", Attendu : 4"
         << endl;
     }
 }
@@ -148,8 +149,11 @@ void testGetArmadaFromFile(){
     flotille << "FAA 1 -2";
     flotille.close();
 
+    cout << "[I] Affiche le contenu du fichier : " << endl;
     CArmada armada;
     armada.getArmadaFromFile();
+    cout << "[I] On remarque qu'il y a des erreurs dans le fichier flotille.txt, c'est pourquoi on observe des "
+            "erreurs." << endl;
     if(armada.getBateau(0)->getNom() == "sous-marin"
         and armada.getBateau(1)->getNom() == "sous-marin"
         and armada.getBateau(2)->getNom() == "FREMM"
@@ -159,6 +163,16 @@ void testGetArmadaFromFile(){
         cout << "[*] Test de getArmadaFromFile : ERREUR ; Nombre de bateau : " << armada.getEffectifTotal() << ", Attendu : 4"
              << endl;
     }
+
+    // Put back a correct configuration | Remet une bonne configuration
+    flotille.open ("/home/kierian/CLionProjects/battleship/flotille.txt");
+    flotille << "# Ceci est un commentaire\n";
+    flotille << "# This is a comment\n";
+    flotille << "sous-marin 2 5\n";
+    flotille << "FREMM 1 3\n";
+    flotille << "FLF 1 2\n";
+    flotille << "FAA 1 3";
+    flotille.close();
 }
 
 /**
@@ -182,6 +196,7 @@ void testPlacerAleatoirement(){
         CGui cGui(&armada, &cCoups);
         cGui.positionnerBateaux();
         cout << cGui;
+        cout << "[I] Visualiser que les bateaux ne se chevauchent pas : OK" << endl;
     } catch (const char* msg) {
         cerr << msg << endl;
     }
